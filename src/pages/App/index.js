@@ -1,7 +1,9 @@
+import FrontPage from "../FrontPage"
+
 export default function App() {
     return (
-        <div>
-            123
+        <div className="">
+            <FrontPage />
         </div>
     )
 }
