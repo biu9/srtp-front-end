@@ -1,13 +1,10 @@
-const SERVER = "localhost:1234";
+const SERVER = "http://127.0.0.1:1234";
 
 export const POST = (url, body) => {
   return new Promise((resolve, reject) => {
     fetch(SERVER + url, {
       method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+      mode: "cors",
       body: JSON.stringify(body),
     })
       .then((response) => response.json())

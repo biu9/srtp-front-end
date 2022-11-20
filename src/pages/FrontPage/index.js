@@ -19,6 +19,11 @@ export default function FrontPage() {
                     console.log(trace);
                     handleVerify(trace).then(response => {
                         console.log(response);
+                        if(response.message === 'pass') {
+                            alert('pass');
+                        } else {
+                            alert('fail');
+                        }
                     });
                     trace.length = 0;
                 }}
